@@ -1,0 +1,77 @@
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-top" style="">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-left">
+      <li>
+        <a (click)="toggleMenu()" style="margin-left: -25px" id="alter"><i
+          class="glyphicon glyphicon-menu-hamburger"></i></a>
+      </li>
+
+      <li style="position: fixed; display:block">
+        <a href=""
+           style="outline: none; margin: 12px 12px; padding: 0; position: fixed;">
+          <img src="https://axibase.com/atsd/axibase_logo_blue.gif"
+               id="logo"
+               title="logo"
+               style="outline: none"
+               onload>
+        </a>
+      </li>
+    </ul>
+
+    <div class="nav navbar-nav navbar-brand upper-brand" id="big-text"><b id="title"></b></div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a role="button" id="fullscreen">
+          <i class="glyphicon glyphicon-fullscreen"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="content">
+  <div [ngClass]="{closed: isMenuHidden}" id="slide-panel">
+    <div class="panel-group" id="accordion"></div>
+  </div>
+  <div class="slide-content">
+    <div class="view" id="view" align="center"></div>
+  </div>
+</div>
+
+<footer class="navbar navbar-default footer" id="navbar-bottom" style="">
+  <div class="container-fluid">
+    <div class="navbar-brand text-muted" align="center" id="footnote">
+      <a (click)="goPreviousSection()">
+        <span class="glyphicon glyphicon-fast-backward"></span>
+      </a>
+
+      <a (click)="goPreviousSlide()">
+        <span class="glyphicon glyphicon-backward"></span>
+      </a>
+
+      <a (click)="toggle()">
+        <span class="glyphicon glyphicon-play"></span>
+      </a>
+
+      <a (click)="goNextSlide()">
+        <span class="glyphicon glyphicon-forward"></span>
+      </a>
+
+      <a (click)="goNextSection()">
+        <span class="glyphicon glyphicon-fast-forward"></span>
+      </a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-left">
+      <li class="nav navbar-nav navbar-text" id="copy">
+        <b>&copy; Axibase | Data Source: <a href="http://energinet.dk" target="_blank">Energinet.dk</a></b>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav navbar-nav navbar-text" id="page-number">
+      </li>
+    </ul>
+  </div>
+</footer>
